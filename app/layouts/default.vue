@@ -28,13 +28,6 @@
         <nuxt />
       </v-container>
     </v-main>
-
-    <!-- snackbar の表示 -->
-    <snackbar
-      :visible="snackbarVisible"
-      :message="snackbarMessage"
-      @close="closeSnackbar()"
-    />
   </v-app>
 </template>
 
@@ -42,7 +35,6 @@
 import {
   defineComponent,
   reactive,
-  computed,
   toRefs,
   useStore,
   useRouter,
