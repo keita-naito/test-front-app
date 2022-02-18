@@ -30,6 +30,7 @@ const config: NuxtConfig = {
   plugins: [
     { src: '~/plugins/vuetify.js', mode: 'client' },
     '~/plugins/cookie-storage.js',
+    '~/plugins/axios.js',
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

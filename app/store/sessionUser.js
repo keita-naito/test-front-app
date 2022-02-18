@@ -42,4 +42,9 @@ export const actions = {
       commit('setSignInState', false)
     }
   },
+
+  signOutOnScreen({ commit }) {
+    commit('resetHeaders')
+    commit('setSignInState', false)
+  },
 }
