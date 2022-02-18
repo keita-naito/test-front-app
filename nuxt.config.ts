@@ -1,8 +1,17 @@
 import { NuxtConfig } from '@nuxt/types'
 
+const { resolve } = require('path')
+require('dotenv').config({ path: resolve(__dirname, './app/.env') })
+
+const { BASE_URL, BASE_API_URL } = process.env
+
 const config: NuxtConfig = {
   ssr: true,
   srcDir: 'app',
+  env: {
+    baseUrl: BASE_URL || 'http://localhost:8082',
+    baseApiUrl: BASE_API_URL || 'http://localhost:3000',
+  },
   head: {
     titleTemplate: '%s - online-class-frontend-user',
     title: 'online-class-frontend-user',
@@ -42,7 +51,9 @@ const config: NuxtConfig = {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: BASE_API_URL || 'http://localhost:3000',
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
