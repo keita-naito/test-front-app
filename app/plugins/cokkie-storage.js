@@ -8,13 +8,13 @@ const CRYPTO_KEY = '88e3b6e423c0c06aa73e7a65188bdf3229b20f23'
 
 export default ({ store, req, isDev }) => {
   createPersistedState({
-    key: '_online-class-v1',
+    key: '_test-front-app',
     paths: COOKIE_TARGET_STORE,
     storage: {
       getItem: (key) => {
         const value = process.client
           ? Cookies.get(key)
-          : cookie.parse(req.headers.cookie)[key]
+          : cookie.parse(req.headers.cookie || '')[key]
         let result
         try {
           const decoded = CryptoJS.AES.decrypt(value, CRYPTO_KEY).toString(
