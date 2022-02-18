@@ -19,7 +19,7 @@ export const mutations = {
 
 export const actions = {
   async signIn({ commit }, params) {
-    const response = await this.$axios.post('/v1/user/auth/sign_in', params)
+    const response = await this.$axios.post('/auth/sign_in', params)
     const headers = response.headers
 
     const signInHeaders = {
@@ -34,7 +34,7 @@ export const actions = {
 
   async signOut({ commit }) {
     try {
-      await this.$axios.delete('/v1/user/auth/sign_out')
+      await this.$axios.delete('/auth/sign_out')
     } catch {
       // noop
     } finally {
