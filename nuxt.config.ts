@@ -2,6 +2,7 @@ import { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
   ssr: true,
+  srcDir: 'app',
   head: {
     titleTemplate: '%s - online-class-frontend-user',
     title: 'online-class-frontend-user',
