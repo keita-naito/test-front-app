@@ -64,11 +64,8 @@ export default defineComponent({
     const signOut = async () => {
       try {
         await store.dispatch('sessionUser/signOut')
-        store.dispatch('snackbar/setMessage', 'ログアウトしました')
       } catch {
-        store.dispatch('snackbar/setMessage', 'すでにログアウトしています')
       } finally {
-        store.dispatch('snackbar/open')
         router.push('/sign_in')
       }
     }
