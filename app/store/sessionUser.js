@@ -32,15 +32,9 @@ export const actions = {
     commit('setSignInState', true)
   },
 
-  async signOut({ commit }) {
-    try {
-      await this.$axios.delete('/auth/sign_out')
-    } catch {
-      // noop
-    } finally {
-      commit('resetHeaders')
-      commit('setSignInState', false)
-    }
+  signOut({ commit }) {
+    commit('resetHeaders')
+    commit('setSignInState', false)
   },
 
   signOutOnScreen({ commit }) {
