@@ -544,10 +544,6 @@ _:lang(x) + _:-webkit-full-screen-document,
     left: 50%;
     transform: translate(-50%, -15%);
     z-index: 1;
-    @include below-xs {
-      height: 174px;
-      transform: translate(-50%, -20%);
-    }
   }
 
   &:fullscreen {
@@ -634,10 +630,6 @@ _:lang(x) + _:-webkit-full-screen-document,
           padding: 0 12px 2px 32px;
           display: flex;
           align-items: center;
-          @include below-xs {
-            font-size: 12px;
-            padding: 0 0 2px 24px;
-          }
         }
 
         .value_area {
