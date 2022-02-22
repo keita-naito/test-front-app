@@ -3,7 +3,7 @@ import { NuxtConfig } from '@nuxt/types'
 const { resolve } = require('path')
 require('dotenv').config({ path: resolve(__dirname, './app/.env') })
 
-const { BASE_URL, BASE_API_URL } = process.env
+const { BASE_URL, BASE_API_URL, MOVIE_URL } = process.env
 
 const config: NuxtConfig = {
   ssr: true,
@@ -11,6 +11,7 @@ const config: NuxtConfig = {
   env: {
     baseUrl: BASE_URL || 'http://localhost:8082',
     baseApiUrl: BASE_API_URL || 'http://localhost:3000',
+    movieUrl: MOVIE_URL || '',
   },
   head: {
     titleTemplate: '%s - online-class-frontend-user',
