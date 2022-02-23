@@ -22,9 +22,7 @@ export default defineComponent({
     useAsync(async () => {
       try {
         await store.dispatch('article/fetchArticles')
-      } catch (err) {
-        console.log(err)
-      }
+      } catch (err) {}
     })
 
     const articles = computed(() => {
