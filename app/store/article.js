@@ -10,7 +10,6 @@ export const getters = {
 
 export const mutations = {
   setArticles(state, articles) {
-    console.log(articles)
     state.articles = articles
   },
 }
