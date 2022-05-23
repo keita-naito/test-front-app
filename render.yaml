@@ -13,4 +13,8 @@ services:
     envVars:
       - key: HOST
         value: 0.0.0.0
+      - key: BASE_API_URL
+        value: https://test-app-api.onrender.com
+      - key: BASE_URL
+        value: https://test-app-frontend.onrender.com
     autoDeploy: false
