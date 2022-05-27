@@ -17,4 +17,6 @@ services:
         value: https://test-app-api.onrender.com
       - key: BASE_URL
         value: https://test-app-frontend.onrender.com
+      - key: TEST
+        value: '*'
     autoDeploy: false
